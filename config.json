@@ -1,0 +1,13 @@
+{
+    "name": "DHT11",
+    "description": "Mục mở rộng sử dụng module cảm biến nhiệt độ và độ ẩm",
+    "libs": [
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+    },
+    "poster": "poster.png"
+}
