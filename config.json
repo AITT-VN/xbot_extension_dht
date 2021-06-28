@@ -1,6 +1,6 @@
 {
-    "name": "DHT11",
-    "description": "Mục mở rộng sử dụng module cảm biến nhiệt độ và độ ẩm",
+    "name": "Cảm biến DHT",
+    "description": "Mục mở rộng của xbot cho cảm biến nhiệt độ và độ ẩm DHT",
     "libs": [
     ],
     "blocks": [
