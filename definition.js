@@ -96,7 +96,7 @@ Blockly.Python["xbot_dht_sensor_meansure"] = function (block) {
   var port = block.getFieldValue("port");
   var pin = block.getFieldValue("pin");
   // TODO: Assemble Python into code variable.
-  Blockly.Python.definitions_['import_DHT'] = "import dht";
+  Blockly.Python.definitions_['import_dht'] = "import dht";
   Blockly.Python.definitions_['import_DHT' + port + pin] = "dht11 = dht.DHT11(Pin(PORTS_DIGITAL[" + port + "][" + pin + "]))";
   var code = "dht11.measure()\n";
   return code;
@@ -107,6 +107,8 @@ Blockly.Python["xbot_dht_sensor_read"] = function (block) {
   var pin = block.getFieldValue("pin");
   var type = block.getFieldValue("type");
   // TODO: Assemble Python into code variable.
+  Blockly.Python.definitions_['import_DHT'] = "import dht";
+  Blockly.Python.definitions_['import_DHT' + port + pin] = "dht11 = dht.DHT11(Pin(PORTS_DIGITAL[" + port + "][" + pin + "]))";
   var code = "dht11." + type ;
   return [code, Blockly.Python.ORDER_NONE];
 };
