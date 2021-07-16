@@ -9,20 +9,20 @@ Blockly.Blocks["xbot_dht_sensor_meansure"] = {
           type: "field_dropdown",
           name: "port",
           options: [
-            ["1", "1"],
-            ["2", "2"],
-            ["3", "3"],
-            ["4", "4"],
-            ["5", "5"],
-            ["6", "6"],
+            ["1", "0"],
+            ["2", "1"],
+            ["3", "2"],
+            ["4", "3"],
+            ["5", "4"],
+            ["6", "5"],
           ],
         },
         {
           type: "field_dropdown",
           name: "pin",
           options: [
-            ["1","1"],
-            ["2","2"],
+            ["1","0"],
+            ["2","1"],
           ],
         },
         {
@@ -52,28 +52,28 @@ Blockly.Blocks["xbot_dht_sensor_read"] = {
           type: "field_dropdown",
           name: "port",
           options: [
-            ["1", "1"],
-            ["2", "2"],
-            ["3", "3"],
-            ["4", "4"],
-            ["5", "5"],
-            ["6", "6"],
+            ["1", "0"],
+            ["2", "1"],
+            ["3", "2"],
+            ["4", "3"],
+            ["5", "4"],
+            ["6", "5"],
           ],
         },
         {
           type: "field_dropdown",
           name: "pin",
           options: [
-            ["1","1"],
-            ["2","2"],
+            ["1","0"],
+            ["2","1"],
           ],
         },
         {
           type: "field_dropdown",
           name: "type",
           options: [
-            ["nhiệt độ","temperature"],
-            ["độ ẩm","humidity"],
+            ["nhiệt độ","temperature()"],
+            ["độ ẩm","humidity()"],
           ],
         },
         {
@@ -97,7 +97,7 @@ Blockly.Python["xbot_dht_sensor_meansure"] = function (block) {
   var pin = block.getFieldValue("pin");
   // TODO: Assemble Python into code variable.
   Blockly.Python.definitions_['import_DHT'] = "import dht";
-  Blockly.Python.definitions_['import_DHT' + port + pin] = "dht11 = dht.DHT11(pin"+ port + pin +")";
+  Blockly.Python.definitions_['import_DHT' + port + pin] = "dht11 = dht.DHT11(Pin(PORTS_DIGITAL[" + port + "][" + pin + "]))";
   var code = "dht11.measure()\n";
   return code;
 };
