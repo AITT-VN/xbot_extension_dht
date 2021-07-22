@@ -3,7 +3,7 @@ Blockly.Blocks["xbot_dht_sensor_meansure"] = {
     this.jsonInit({
       colour: "#3F63AD",
       tooltip: "",
-      message0: "%3 cập nhập cảm biến DHT cổng %1 chân %2",
+      message0: "%3 cập nhập cảm biến DHT cổng %1 pin %2",
       args0: [
         {
           type: "field_dropdown",
@@ -46,7 +46,7 @@ Blockly.Blocks["xbot_dht_sensor_read"] = {
     this.jsonInit({
       colour: "#3F63AD",
       tooltip: "",
-      message0: "%4 đọc cảm biến DHT cổng %1 chân %2 %3",
+      message0: "%4 đọc cảm biến DHT cổng %1 pin %2 %3",
       args0: [
         {
           type: "field_dropdown",
