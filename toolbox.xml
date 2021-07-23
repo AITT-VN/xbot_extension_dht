@@ -1,5 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="DHT11" colour="#3F63AD" icon="thermometer-quarter">
+  <category name="DHT11" colour="#ff3333" icon="thermometer-quarter">
     <block type="xbot_dht_sensor_meansure" />
     <block type="xbot_dht_sensor_read" />
   </category>
